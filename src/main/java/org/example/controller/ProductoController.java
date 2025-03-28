@@ -1,10 +1,10 @@
 package org.example.controller;
 
-
 import org.example.productos.Producto;
 import org.example.productos.ProductoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -29,6 +29,7 @@ public class ProductoController {
     }
 
     //  obtener un producto por su ID
+    @Transactional
     @GetMapping("/obtener/{id}")
     public Producto obtenerProductoPorId(@PathVariable Long id) {
         return productoService.obtenerProductoPorId(id);

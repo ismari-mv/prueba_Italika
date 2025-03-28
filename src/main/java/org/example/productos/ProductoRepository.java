@@ -5,12 +5,12 @@ import org.springframework.data.jpa.repository.query.Procedure;
 
 public interface ProductoRepository extends JpaRepository<Producto, Long> {
 
-    @Procedure(name = "agregar_producto")
+    @Procedure(procedureName = "AGREGARPRODUCTO")
     void agregarProducto(String nombre, String descripcion, Double precio, Integer cantidad);
 
-    @Procedure(name = "actualizar_cantidad_p")
+    @Procedure(procedureName = "ACTUALIZARCANTIDADP")
     void actualizarCantidadProducto(Long id, Integer cantidad);
 
-    @Procedure(name = "obtener_producto_id")
+    @Procedure(procedureName = "OBTENERPRODUCTOID")
     Producto obtenerProductoPorId(Long id);
 }

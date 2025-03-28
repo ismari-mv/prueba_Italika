@@ -23,6 +23,5 @@ public class Producto {
     private Double precio;
 
     private int cantidad;
-    @Column (nullable = false)
-    private  boolean bloqueado;
+
 }

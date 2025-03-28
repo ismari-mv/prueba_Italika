@@ -4,12 +4,11 @@ import jakarta.validation.Valid;
 import org.example.dto.GenericResponseDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.token.TokenService;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
-import usuario.DatosDetalleUsuario;
-import usuario.Usuario;
-import usuario.UsuarioRepository;
+import org.example.usuario.DatosDetalleUsuario;
+import org.example.usuario.Usuario;
+import org.example.usuario.UsuarioRepository;
 
 import java.net.URI;
 
